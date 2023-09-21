@@ -20,6 +20,8 @@ export default async function RootLayout({ children }) {
   const res = await fetch("http://localhost:9999/topics");
   const topics = await res.json();
 
+  console.log(topics);
+
   return (
     <html>
       <body>
