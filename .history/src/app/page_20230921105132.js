@@ -6,7 +6,7 @@ export default function Home() {
       <img
         style={{
           display: "block",
-          width: 300,
+          width: 600,
           objectFit: "cover",
         }}
         src="/hello.png"
