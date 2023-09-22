@@ -1,0 +1,19 @@
+h1 a {
+  text-decoration: none;
+}
+
+.createWrap {
+  display: inline-block;
+  width: auto;
+  padding: 40px;
+  box-sizing: border-box;
+  background: rgb(250, 202, 223);
+  background: linear-gradient(
+    90deg,
+    rgba(250, 202, 223, 1) 0%,
+    rgba(196, 215, 238, 1) 100%
+  );
+  border-radius: 6px;
+
+  color: #777;
+}

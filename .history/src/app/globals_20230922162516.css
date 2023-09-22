@@ -1,0 +1,14 @@
+h1 a {
+  text-decoration: none;
+}
+
+.createWrap {
+  display: inline-block;
+  width: auto;
+  padding: 40px 80px;
+  box-sizing: border-box;
+  border: 2px solid rgba(250, 202, 223, 1);
+  border-radius: 6px;
+
+  color: rgba(250, 202, 243, 1);
+}

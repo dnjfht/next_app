@@ -3,7 +3,6 @@
 "use client";
 
 import { useState } from "react";
-import { v4 as uuidv4 } from "uuid";
 
 export default function Create() {
   const [title, setTitle] = useState("");
@@ -18,7 +17,7 @@ export default function Create() {
         onSubmit={(e) => {
           e.preventDefault();
           setCreateArr((prev) => {
-            return [...prev, { id: uuidv4(), title: title, body: content }];
+            return [...prev, { title: title, body: content }];
           });
           setTitle("");
           setContent("");
@@ -52,16 +51,14 @@ export default function Create() {
         </p>
       </form>
 
-      <div class="createWrap">
-        {createArr?.map((arr) => {
-          return (
-            <div class="create" key={arr.id}>
-              <p>title : {arr.title}</p>
-              <p>body : {arr.body}</p>
-            </div>
-          );
-        })}
-      </div>
+      {createArr?.map((arr, index) => {
+        return (
+          <div key={index}>
+            <p>{arr.title}</p>
+            <p>{arr.body}</p>
+          </div>
+        );
+      })}
     </div>
   );
 }

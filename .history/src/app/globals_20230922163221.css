@@ -3,17 +3,16 @@ h1 a {
 }
 
 .createWrap {
-  width: 40%;
-
-  display: flex;
-  flex-direction: column;
+  width:100%;
+  
+  flex;
+  flex-direction:col;
 }
 .create {
-  width: 100%;
+  display: inline-block;
+  width: auto;
   padding: 40px 80px;
   box-sizing: border-box;
-  margin-bottom: 20px;
-
   background: rgb(229, 120, 93);
   background: linear-gradient(
     90deg,

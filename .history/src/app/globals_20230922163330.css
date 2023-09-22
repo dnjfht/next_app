@@ -9,11 +9,11 @@ h1 a {
   flex-direction: column;
 }
 .create {
-  width: 100%;
+  display: inline-block;
+  width: auto;
   padding: 40px 80px;
-  box-sizing: border-box;
   margin-bottom: 20px;
-
+  box-sizing: border-box;
   background: rgb(229, 120, 93);
   background: linear-gradient(
     90deg,

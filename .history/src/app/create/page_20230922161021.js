@@ -52,16 +52,14 @@ export default function Create() {
         </p>
       </form>
 
-      <div class="createWrap">
-        {createArr?.map((arr) => {
-          return (
-            <div class="create" key={arr.id}>
-              <p>title : {arr.title}</p>
-              <p>body : {arr.body}</p>
-            </div>
-          );
-        })}
-      </div>
+      {createArr?.map((arr) => {
+        return (
+          <div key={arr.id}>
+            <p>title : {arr.title}</p>
+            <p>body : {arr.body}</p>
+          </div>
+        );
+      })}
     </div>
   );
 }

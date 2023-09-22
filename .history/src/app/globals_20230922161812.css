@@ -1,0 +1,10 @@
+h1 a {
+  text-decoration: none;
+}
+
+.createWrap {
+  width: 100%;
+  padding: 40px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+}
