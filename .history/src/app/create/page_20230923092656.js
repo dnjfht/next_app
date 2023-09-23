@@ -8,7 +8,14 @@
 // import { useRouter } from "next/router";
 import { useRouter } from "next/navigation";
 
+// import { useState } from "react";
+// import { v4 as uuidv4 } from "uuid";
+
 export default function Create() {
+  // const [title, setTitle] = useState("");
+  // const [content, setContent] = useState("");
+  // const [createArr, setCreateArr] = useState([]);
+
   // 사용자가 보고 있는 페이지를 방금 생성한 라스트 아이디에 해당하는 글로 리디렉션을 시켜야 함.
   const router = useRouter();
 
@@ -17,6 +24,12 @@ export default function Create() {
       <form
         onSubmit={(e) => {
           e.preventDefault();
+
+          // setCreateArr((prev) => {
+          //   return [...prev, { id: uuidv4(), title: title, body: content }];
+          // });
+          // setTitle("");
+          // setContent("");
 
           const title = e.target.title.value;
           const body = e.target.body.value;
@@ -38,22 +51,47 @@ export default function Create() {
 
               // router로 방금 생성한 글로 리디렉션을 시킬 수 있음.
               router.push(`read/${lastId}`);
-              // 그런데 여기서 문제점이 하나 발생 : 글 목록이 갱신이 되지 않음.
             });
         }}
       >
         <p>
-          <input type="text" name="title" placeholder="title" />
+          <input
+            // onChange={(e) => {
+            //   e.preventDefault();
+            //   setTitle(e.target.value);
+            // }}
+            type="text"
+            name="title"
+            placeholder="title"
+            // value={title}
+          />
         </p>
         <p>
-          <textarea name="body" placeholder="body" />
+          <textarea
+            // onChange={(e) => {
+            //   e.preventDefault();
+            //   setContent(e.target.value);
+            // }}
+            name="body"
+            placeholder="body"
+            // value={content}
+          />
         </p>
         <p>
           <input type="submit" value="create" />
         </p>
       </form>
 
-      <div class="createWrap"></div>
+      <div class="createWrap">
+        {/* {createArr?.map((arr) => {
+          return (
+            <div class="create" key={arr.id}>
+              <p>title : {arr.title}</p>
+              <p>body : {arr.body}</p>
+            </div>
+          );
+        })} */}
+      </div>
     </div>
   );
 }

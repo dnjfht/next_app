@@ -3,7 +3,7 @@ h1 a {
 }
 
 .createWrap {
-  width: 400px;
+  width: 300px;
 
   display: flex;
   flex-direction: column;

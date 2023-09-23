@@ -38,7 +38,6 @@ export default function Create() {
 
               // router로 방금 생성한 글로 리디렉션을 시킬 수 있음.
               router.push(`read/${lastId}`);
-              // 그런데 여기서 문제점이 하나 발생 : 글 목록이 갱신이 되지 않음.
             });
         }}
       >
