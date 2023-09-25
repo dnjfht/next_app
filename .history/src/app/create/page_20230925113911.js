@@ -18,6 +18,7 @@ export default function Create() {
         onSubmit={(e) => {
           e.preventDefault();
 
+          console.log(e.target);
           const title = e.target.title.value;
           const body = e.target.body.value;
           console.log(title, body);
