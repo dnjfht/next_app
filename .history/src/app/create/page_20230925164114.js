@@ -35,9 +35,8 @@ export default function Create() {
             .then((res) => res.json()) //
             .then((result) => {
               console.log(result);
-              const lastId = result.id;
-
               router.refresh();
+              const lastId = result.id;
 
               // router로 방금 생성한 글로 리디렉션을 시킬 수 있음.
               router.push(`read/${lastId}`);

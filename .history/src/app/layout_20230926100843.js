@@ -18,8 +18,7 @@ export default async function RootLayout({ children }) {
   // }, []);
 
   const res = await fetch("http://localhost:9999/topics", {
-    // next: { revalidate: 0 },
-    cache: "no-store",
+    next: { revalidate: 10 },
   });
   const topics = await res.json();
 
