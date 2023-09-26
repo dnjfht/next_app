@@ -14,7 +14,7 @@ export function Control() {
       {id && (
         <>
           <li>
-            <Link href={`/upadate/` + id}>Update</Link>
+            <Link href={`/upadate` + id}>Update</Link>
           </li>
           <li>
             <input type="button" value="delete" />
