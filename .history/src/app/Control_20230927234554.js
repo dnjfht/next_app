@@ -1,7 +1,7 @@
 "use client";
 import Link from "next/link";
 import { useParams } from "next/navigation";
-import { useRouter } from "next/navigation";
+import { useRouter } from "next/router";
 
 export function Control() {
   const id = useParams().id;

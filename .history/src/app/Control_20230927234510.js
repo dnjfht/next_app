@@ -1,7 +1,7 @@
 "use client";
 import Link from "next/link";
 import { useParams } from "next/navigation";
-import { useRouter } from "next/navigation";
+import { useRouter } from "next/router";
 
 export function Control() {
   const id = useParams().id;
@@ -26,10 +26,8 @@ export function Control() {
                 const options = { method: "DELETE" };
                 fetch(`http://localhost:9999/topics/${id}`, options)
                   .then((res) => res.json())
-                  .then((result) => {
-                    router.push("/");
-                    router.refresh();
-                  });
+                  .then((result) => router.push("/"));
+                router.refresh();
               }}
             />
           </li>
