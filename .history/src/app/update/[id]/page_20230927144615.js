@@ -47,7 +47,6 @@ export default function Update() {
             .then((result) => {
               console.log(result);
               const lastId = result.id;
-              console.log(lastId);
 
               router.refresh();
 

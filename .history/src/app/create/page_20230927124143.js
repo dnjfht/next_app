@@ -55,6 +55,8 @@ export default function Create() {
           <input type="submit" value="create" />
         </p>
       </form>
+
+      <div className="createWrap"></div>
     </div>
   );
 }

@@ -54,7 +54,7 @@ export default function Create() {
 
       {createArr?.map((arr) => {
         return (
-          <div class="createWrap" key={arr.id}>
+          <div className="createWrap" key={arr.id}>
             <p>title : {arr.title}</p>
             <p>body : {arr.body}</p>
           </div>

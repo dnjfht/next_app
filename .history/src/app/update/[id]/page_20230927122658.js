@@ -8,7 +8,7 @@
 // import { useRouter } from "next/router";
 import { useRouter } from "next/navigation";
 
-export default function Create() {
+export default function Update(props) {
   // 사용자가 보고 있는 페이지를 방금 생성한 라스트 아이디에 해당하는 글로 리디렉션을 시켜야 함.
   const router = useRouter();
 
@@ -55,6 +55,8 @@ export default function Create() {
           <input type="submit" value="create" />
         </p>
       </form>
+
+      <div class="createWrap"></div>
     </div>
   );
 }

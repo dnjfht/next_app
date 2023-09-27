@@ -32,8 +32,7 @@ export default function Update() {
           const body = e.target.body.value;
           console.log(title, body);
           const options = {
-            method: "PUT",
-            // 수정을 할 때는 PUT 또는 PATCH를 사용.
+            method: "POST",
             headers: {
               "Content-Type": "application/json",
             },
@@ -42,17 +41,16 @@ export default function Update() {
 
           // 서버와 통신하는 코드
           // 서버 쪽으로 데이터를 전송해서 데이터를 추가
-          fetch(`http://localhost:9999/topics/${id}`, options) //
+          fetch(`http://localhost:9999/topics`, options) //
             .then((res) => res.json()) //
             .then((result) => {
               console.log(result);
               const lastId = result.id;
-              console.log(lastId);
 
               router.refresh();
 
               // router로 방금 생성한 글로 리디렉션을 시킬 수 있음.
-              router.push(`/read/${lastId}`);
+              router.push(`read/${lastId}`);
               // 그런데 여기서 문제점이 하나 발생 : 글 목록이 갱신이 되지 않음.
             });
         }}
@@ -69,17 +67,10 @@ export default function Update() {
           />
         </p>
         <p>
-          <textarea
-            name="body"
-            placeholder="body"
-            value={body}
-            onChange={(e) => {
-              return setBody(e.target.value);
-            }}
-          />
+          <textarea name="body" placeholder="body" value={body} />
         </p>
         <p>
-          <input type="submit" value="update" />
+          <input type="submit" value="create" />
         </p>
       </form>
     </div>
