@@ -42,7 +42,7 @@ export default function Update() {
 
           // 서버와 통신하는 코드
           // 서버 쪽으로 데이터를 전송해서 데이터를 추가
-          fetch(process.env.NEXT_PUBLIC_API_URL + `topics/${id}`, options) //
+          fetch(`http://localhost:9999/topics/${id}`, options) //
             .then((res) => res.json()) //
             .then((result) => {
               console.log(result);
